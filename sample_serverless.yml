@@ -1,0 +1,22 @@
+service: fsq-data # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: ap-southeast-1
+
+  environment:
+    aws_access_key: sample_key
+    aws_secret_key: sample_secret_key
+    aws_region: sample_region
+
+    fsq_client_id: sample_fsq_client_id
+    fsq_client_secret: sample_client_secret
+functions:
+  getFSQData:
+    handler: handler.getFSQData
+    events:
+      - schedule:
+          rate: rate(3 minutes)
+          enabled: true

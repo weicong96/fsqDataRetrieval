@@ -1,0 +1,22 @@
+{
+  "name": "instamap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mapbox/togeojson": "^0.16.0"
+  },
+  "dependencies": {
+    "@turf/centroid": "^6.0.2",
+    "aws-sdk": "^2.300.0",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2"
+  }
+}
