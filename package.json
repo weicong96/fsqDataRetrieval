@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mapbox/togeojson": "^0.16.0"
+    "@mapbox/togeojson": "^0.16.0",
+    "serverless-offline": "^3.25.10"
   },
   "dependencies": {
     "@turf/centroid": "^6.0.2",
