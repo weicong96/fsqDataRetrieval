@@ -24,7 +24,7 @@ function lat2tile(lat,zoom)  {
 }
 
 
-module.exports.getFSQData = (event, context, callback) => {
+module.exports.handler = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false
   var index = moment().minute()
   var batchSize = 28 * 5;

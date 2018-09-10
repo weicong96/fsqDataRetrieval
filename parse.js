@@ -27,7 +27,8 @@ fs.readFile("./singapore.json", (err, data)=>{
     _.forEach(coordinates, (feature)=>{
       var lat = feature[1]
       var lng = feature[0]
-
+      if(zoom == 16)
+      console.log(lat2tile(lat, zoom),long2tile(lat, zoom), zoom, lat, lng)
       var tileLat = lat2tile(lat, zoom)
       var tileLng = long2tile(lng, zoom)
 

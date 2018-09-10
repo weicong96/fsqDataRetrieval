@@ -10,8 +10,8 @@ let config = {
 var client =  new AWS.DynamoDB.DocumentClient({
   service : new AWS.DynamoDB(config)
 })
-module.exports.saveTile = (event, context, callback) =>{
-  fs.readFile("./tiles.json", (err, data)=>{
+module.exports.handler = (event, context, callback) =>{
+  fs.readFile("../tiles.json", (err, data)=>{
     data = data.toString();
     var tiles = JSON.parse(data);
     var minute = moment().minute()
@@ -31,12 +31,7 @@ module.exports.saveTile = (event, context, callback) =>{
             tile_zoom: zoom
           }
         }, (err, data)=>{
-          if(err){
-            console.log(err)
-          }else{
-            console.log("DONE")
-          }
-
+            return callback(err, data)
         })
       });
     })
